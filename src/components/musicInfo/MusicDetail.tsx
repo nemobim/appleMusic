@@ -1,16 +1,15 @@
-import MusicInfo from "./MusicInfo";
+import { IMuicDetailInfo } from "../../types/music";
+import Info from "./Info";
 
-const MusicDetail = () => {
+const MusicDetail = ({ infoData }: IMuicDetailInfo) => {
+  const infos = infoData.infoArray;
+
   return (
-    <div>
-      <MusicInfo title="Price" text="11.99" />
-      <MusicInfo title="category" text="Country" />
-      <MusicInfo title="contentType" text="Album" />
-      <MusicInfo title="releaseDate" text="2023-03-24T00:00:00-07:00" />
-      <MusicInfo
-        title="rights"
-        text="℗ 2023 River House Artists LLC, under exclusive license to Sony Music Entertainment. All rights reserved."
-      />
+    <div className="my-[1rem]">
+      {infos.map(
+        (info, i) =>
+          i > 1 && <Info title={info.title} text={info.text} key={info.title} />
+      )}
     </div>
   );
 };

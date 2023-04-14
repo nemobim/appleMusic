@@ -13,6 +13,18 @@ export interface IMusicData {
   rank: number;
 }
 
+export interface IMuicDetailInfo {
+  infoData: {
+    artistLink: string;
+    albumLink: string;
+    image: string;
+    infoArray: {
+      title: string;
+      text: string;
+    }[];
+  };
+}
+
 export interface IMusic {
   "im:name": {
     label: string;
