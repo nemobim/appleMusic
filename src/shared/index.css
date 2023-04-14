@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-size {
+  @apply text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl;
+}
+
+/* 타이틀 폰트 */
+.title-size {
+  @apply text-[6rem] sm:text-[8rem];
+}
+
+@media (max-width: 400px) {
+  .title-size {
+    font-size: 5rem;
+  }
+}
