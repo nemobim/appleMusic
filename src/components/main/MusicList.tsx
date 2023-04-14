@@ -6,6 +6,9 @@ const MusicList = () => {
       <MusicBox />
       <MusicBox />
       <MusicBox />
+      <MusicBox />
+      <MusicBox />
+      <MusicBox />
     </div>
   );
 };

@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
+
 const MusicBox = () => {
+  const nav = useNavigate();
+
   return (
-    <div className="my-2 flex h-[4.5rem] w-[90%] items-center rounded-md bg-slate-50 p-1 shadow-md hover:bg-slate-100">
+    <div
+      onClick={() => nav("/musicinfo/:id")}
+      className="my-2 flex h-[4.5rem] w-[90%] items-center rounded-md bg-slate-50 p-1 shadow-md hover:bg-slate-100"
+    >
       <span className="mx-2 text-[1.5rem] font-extrabold text-slate-700">
         1
       </span>
