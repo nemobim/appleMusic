@@ -18,14 +18,25 @@
   @apply text-[2rem] sm:text-[2.5rem];
 }
 
-/* 타이틀 폰트 */
+/*타이틀 폰트 */
 .title-size {
   @apply text-[6rem] sm:text-[8rem];
+}
+
+/*텍스트 점처리*/
+.text-over {
+  width: 12rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @media (max-width: 435px) {
   .title-size {
     font-size: 5rem;
+  }
+  .text-over {
+    width: 7rem;
   }
 }
 
@@ -45,6 +56,10 @@
   .imgSize {
     width: 2rem;
     height: 2rem;
+  }
+
+  .text-over {
+    width: 6rem;
   }
 }
 
