@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { fetchData } from "../utils/fetchData";
 import Layout from "../components/elements/Layout";
 import Title from "../components/elements/Title";
+import MusicList from "../components/main/MusicList";
+import SearchBar from "../components/main/SearchBar";
 
 const Main = () => {
   const [musicList, setMusicList] = useState("");
@@ -15,7 +17,8 @@ const Main = () => {
   return (
     <Layout>
       <Title text="EL Music" />
-      <div>dddd</div>
+      <SearchBar />
+      <MusicList />
     </Layout>
   );
 };

@@ -8,8 +8,9 @@
   flex-direction: column;
 }
 
+/* 일반 텍스트*/
 .text-size {
-  @apply text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl;
+  @apply text-sm sm:text-base md:text-lg lg:text-xl;
 }
 
 /* 타이틀 폰트 */
@@ -17,8 +18,26 @@
   @apply text-[6rem] sm:text-[8rem];
 }
 
-@media (max-width: 400px) {
+@media (max-width: 435px) {
   .title-size {
     font-size: 5rem;
   }
+}
+
+@media (max-width: 370px) {
+  .title-size {
+    font-size: 3.5rem;
+  }
+  .imgSize {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .text-size {
+    font-size: 0.5rem;
+  }
+}
+
+body {
+  background-color: #f1f5f9;
 }
