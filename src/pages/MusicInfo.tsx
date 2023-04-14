@@ -8,7 +8,9 @@ import MusicLink from "../components/musicInfo/MusicLink";
 const MusicInfo = () => {
   const nav = useNavigate();
   const { state } = useLocation();
-  const infoData = state.detailInfo;
+  console.log(state);
+
+  const infoData = state.data.infoArray;
 
   return (
     <Layout>
@@ -17,10 +19,10 @@ const MusicInfo = () => {
           <button className="w-[100%]" onClick={() => nav("/")}>
             <img alt="돌아가기" src={backCon} className="imgSize" />
           </button>
-          <MusicTitle infoData={infoData} />
+          <MusicTitle infoData={state.data} />
           <div className="row my-[1rem] flex h-[4rem] w-[100%] justify-center">
-            <MusicLink href={infoData.artistLink} text="아티스트 정보" />
-            <MusicLink href={infoData.albumLink} text="앨범 정보" />
+            <MusicLink href={state.data.artistLink} text="아티스트 정보" />
+            <MusicLink href={state.data.albumLink} text="앨범 정보" />
           </div>
           <MusicDetail infoData={infoData} />
         </div>
