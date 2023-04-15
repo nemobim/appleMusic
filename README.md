@@ -9,7 +9,7 @@
 <img width="400" alt="스크린샷 2023-04-15 오전 10 29 14" src="https://user-images.githubusercontent.com/112849712/232176971-146ec801-6df3-44b3-8257-409f612b6bdb.png">
 <p>메인 화면 : 차트 박스 클릭시 상세 페이지로 이동 </p>
 <img width="400" alt="스크린샷 2023-04-15 오전 10 29 09" src="https://user-images.githubusercontent.com/112849712/232176998-5902dd8b-9286-4588-adc4-feea64cdaa06.png">
-<p>상세페이지 : 곡 정보 및 더보기 버튼(애플뮤직으로 이동)/p>
+<p>상세페이지 : 곡 정보 및 더보기 버튼(애플뮤직으로 이동)</p>
 <img width="400" alt="스크린샷 2023-04-15 오전 10 29 21" src="https://user-images.githubusercontent.com/112849712/232176931-aa134e60-5e96-4909-8c3a-cff3fde22199.png">
 <p>검색어 입력시 검색 결과 반영 및 검색 결과 없을시 없다는 빈화면 대신 대체화면 적용</p>
 <img width="400" alt="스크린샷 2023-04-15 오전 10 29 30" src="https://user-images.githubusercontent.com/112849712/232177063-2dc1a483-7c49-4c85-9e92-c4a74932792e.png">
