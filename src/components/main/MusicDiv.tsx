@@ -1,7 +1,8 @@
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { IMusicData } from "../../types/music";
 
-const MusicBox = ({ data, rank }: IMusicData) => {
+const MusicDiv = ({ data, rank }: IMusicData) => {
   const nav = useNavigate();
 
   return (
@@ -33,4 +34,4 @@ const MusicBox = ({ data, rank }: IMusicData) => {
   );
 };
 
-export default MusicBox;
+export default MusicDiv;
