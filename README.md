@@ -1,46 +1,27 @@
-# Getting Started with Create React App
+# 프로젝트 구동 방법 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. yarn install
+2. yarn start
 
-## Available Scripts
+배포 사이트 : https://music-chart-git-main-do-eun.vercel.app/
 
-In the project directory, you can run:
+# 프로젝트 설명
+<img width="400" alt="스크린샷 2023-04-15 오전 10 29 14" src="https://user-images.githubusercontent.com/112849712/232176971-146ec801-6df3-44b3-8257-409f612b6bdb.png">
+<p>메인 화면 : 차트 박스 클릭시 상세 페이지로 이동 </p>
+<img width="400" alt="스크린샷 2023-04-15 오전 10 29 09" src="https://user-images.githubusercontent.com/112849712/232176998-5902dd8b-9286-4588-adc4-feea64cdaa06.png">
+<p>상세페이지 : 곡 정보 및 더보기 버튼(애플뮤직으로 이동)/p>
+<img width="400" alt="스크린샷 2023-04-15 오전 10 29 21" src="https://user-images.githubusercontent.com/112849712/232176931-aa134e60-5e96-4909-8c3a-cff3fde22199.png">
+<p>검색어 입력시 검색 결과 반영 및 검색 결과 없을시 없다는 빈화면 대신 대체화면 적용</p>
+<img width="400" alt="스크린샷 2023-04-15 오전 10 29 30" src="https://user-images.githubusercontent.com/112849712/232177063-2dc1a483-7c49-4c85-9e92-c4a74932792e.png">
+<p>오름차순, 내림차순 필터 기능 구현</p>
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+# 기능 구현에 사용한 라이브러리
+-tailwind css : 시트를 오고가는 화면 전환 없이 빠른 스타일링 가능하며, 반응형 UI 구현과 복잡한 css도 쉽게 적용 가능 합니다.
+-recoil : hook과 유사한 구조를 가져 익숙하게 사용이 가능하고, 상태관리 및 props drilling 문제를 해결할 수 있습니다. 
+-react-router-dom : useLocation을 사용하여 페이지 이동시 state 값을 보낼 수 있고, 새로고침 없이 페이지 이동이 가능합니다.
+-Typescript : 해당 내용에 대한 자동완성 제공 및 오타 교정과 코드를 실행하기 전에 오류가 있을시 경고해줌으로써 런타임 에러 줄일 수 있습니다. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
