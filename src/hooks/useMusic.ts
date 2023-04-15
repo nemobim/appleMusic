@@ -8,7 +8,7 @@ export const useMusic = () => {
   const search = useRecoilValue(searching);
   const musicData = useRecoilValue<IMusicInfo[]>(musicInfo);
 
+  if (search) return searchMusic(musicData, search);
   if (filter === "sortAsc") return sortAsc(musicData);
   if (filter === "sortDesc") return sortDesc(musicData);
-  if (search) return searchMusic(musicData, search);
 };

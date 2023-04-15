@@ -5,6 +5,7 @@ import { IMusic, IMusicInfo } from "../../types/music";
 import { musicInfo } from "../../atom/atoms";
 import { useRecoilState } from "recoil";
 import { useMusic } from "../../hooks/useMusic";
+import NoData from "./\bNoData";
 
 const MusicList = () => {
   const [musicData, setMusicData] = useRecoilState<IMusicInfo[]>(musicInfo);
@@ -38,6 +39,8 @@ const MusicList = () => {
 
   const chartResult = useMusic();
 
+  console.log(chartResult);
+
   return (
     <div className="flexCenter h-[100%] w-[90%] rounded-xl bg-white p-2 shadow-lg sm:w-[40rem]">
       {chartResult &&
@@ -48,6 +51,7 @@ const MusicList = () => {
         musicData.map((data: IMusicInfo, rank) => (
           <MusicBox data={data} rank={rank} key={data.id} />
         ))}
+      {chartResult?.length == 0 && <NoData />}
     </div>
   );
 };

@@ -8,7 +8,6 @@ import MusicLink from "../components/musicInfo/MusicLink";
 const MusicInfo = () => {
   const nav = useNavigate();
   const { state } = useLocation();
-  console.log(state);
 
   const infoData = state.data.infoArray;
 
