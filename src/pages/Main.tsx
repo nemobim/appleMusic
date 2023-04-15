@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Layout from "../components/elements/Layout";
 import Title from "../components/elements/Title";
 import MusicList from "../components/main/MusicList";

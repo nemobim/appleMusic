@@ -1,5 +1,3 @@
-import { Dispatch, SetStateAction } from "react";
-
 export interface IInfoProps {
   title: string;
   text: string;
@@ -31,6 +29,12 @@ export interface IMusicInfo {
     title: string;
     text: string;
   }[];
+}
+export interface IMusicChart {
+  id: string;
+  image: string;
+  title: string;
+  artist: string;
 }
 
 export interface IMusic {

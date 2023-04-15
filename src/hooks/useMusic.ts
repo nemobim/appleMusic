@@ -1,19 +1,12 @@
-import { useEffect, useState } from "react";
-import { fetchData } from "../utils/fetchData";
-import { IMusic } from "../types/music";
+import { useRecoilValue } from "recoil";
+import { filtering, musicInfo } from "../atom/atoms";
+import { IMusicInfo } from "../types/music";
+import { sortAsc, sortDesc } from "../utils/usage";
 
 export const useMusic = () => {
-  const [datas, setDatas] = useState([]);
+  const filter = useRecoilValue(filtering);
+  const musicData = useRecoilValue<IMusicInfo[]>(musicInfo);
 
-  useEffect(() => {
-    fetchData().then((res) => setDatas(res.feed.entry));
-  }, []);
-
-  const getMusicList = datas.map((data: IMusic) => ({
-    artist: data["im:artist"].label,
-    title: data["im:name"].label,
-    image: data["im:image"][0].label,
-  }));
-
-  return getMusicList;
+  if (filter === "sortAsc") return sortAsc(musicData);
+  if (filter === "sortDesc") return sortDesc(musicData);
 };

@@ -13,9 +13,9 @@ const MusicBar = () => {
         className="w-[6rem] bg-slate-100 outline-none"
         onChange={ChangeHandler}
       >
-        <option value="Top 100">Top 100</option>
-        <option value="오름차순">오름차순</option>
-        <option value="내림차순">내림차순</option>
+        <option value="">Top 100</option>
+        <option value="sortAsc">오름차순</option>
+        <option value="sortDesc">내림차순</option>
       </select>
     </div>
   );
