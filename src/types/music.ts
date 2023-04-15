@@ -10,7 +10,7 @@ export interface ILinkProps {
 
 export interface IMusicData {
   data: IMusicInfo;
-  rank: number;
+  rank?: number;
 }
 
 export interface IInfocData {

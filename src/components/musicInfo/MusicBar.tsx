@@ -1,11 +1,15 @@
-import { useRecoilState } from "recoil";
-import { filtering } from "../../atom/atoms";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { filtering, searching } from "../../atom/atoms";
 
 const MusicBar = () => {
-  const [filer, setFilter] = useRecoilState(filtering);
+  const setFilter = useSetRecoilState(filtering);
+  const search = useRecoilValue(searching);
+
   const ChangeHandler = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setFilter(event.target.value);
   };
+
+  if (search) return null;
 
   return (
     <div className="mb-[1rem] flex h-[3rem] w-[90%] justify-end sm:w-[40rem]">

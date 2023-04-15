@@ -44,14 +44,14 @@ const MusicList = () => {
   return (
     <div className="flexCenter h-[100%] w-[90%] rounded-xl bg-white p-2 shadow-lg sm:w-[40rem]">
       {chartResult &&
-        chartResult.map((data: IMusicInfo, rank) => (
-          <MusicBox data={data} rank={rank} key={data.id} />
+        chartResult.map((data: IMusicInfo) => (
+          <MusicBox data={data} key={data.id} />
         ))}
       {!chartResult &&
         musicData.map((data: IMusicInfo, rank) => (
-          <MusicBox data={data} rank={rank} key={data.id} />
+          <MusicBox data={data} rank={rank + 1} key={data.id} />
         ))}
-      {chartResult?.length == 0 && <NoData />}
+      {chartResult?.length === 0 && <NoData />}
     </div>
   );
 };

@@ -1,12 +1,4 @@
-import { IMusicChart, IMusicInfo } from "../types/music";
-
-// /**검색 */
-// export const searchResult = (titles: IMusicInfo[]) => {
-//   const results = titles.filter((music) =>
-//     music["im:name"].label.toLowerCase().includes(value.toLowerCase())
-//   );
-//   return results;
-// };
+import { IMusicInfo } from "../types/music";
 
 // 오름차순 정렬
 export const sortAsc = (chartArray: IMusicInfo[]) => {

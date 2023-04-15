@@ -14,7 +14,7 @@ const MusicBox = ({ data, rank }: IMusicData) => {
       className="my-2 flex h-[4.5rem] w-[90%] items-center rounded-md bg-slate-50 p-1 shadow-md hover:bg-slate-100"
     >
       <span className="w-[4rem] text-center text-[1.5rem] font-bold text-slate-700">
-        {rank + 1}
+        {rank && rank}
       </span>
       <img
         alt="음원이미지"
