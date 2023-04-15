@@ -39,8 +39,6 @@ const MusicList = () => {
 
   const chartResult = useMusic();
 
-  console.log(chartResult);
-
   return (
     <div className="flexCenter h-[100%] w-[90%] rounded-xl bg-white p-2 shadow-lg sm:w-[40rem]">
       {chartResult &&
