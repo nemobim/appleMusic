@@ -25,12 +25,9 @@ export const sortDesc = (chartArray: IMusicInfo[]) => {
 };
 
 // 검색
-export const searchMusic = (
-  chartArray: IMusicChart[],
-  searchKeyword: string
-) => {
-  const searched = chartArray.filter((chart) =>
-    chart.title.toLowerCase().includes(searchKeyword.toLowerCase())
+export const searchMusic = (chartArray: IMusicInfo[], search: string) => {
+  const searched = [...chartArray].filter((chart) =>
+    chart.infoArray[0].text.toLowerCase().includes(search.toLowerCase())
   );
   return searched;
 };

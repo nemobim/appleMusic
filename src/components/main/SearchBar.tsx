@@ -1,16 +1,25 @@
-import { useRecoilState } from "recoil";
+import { useSetRecoilState } from "recoil";
 import { searching } from "../../atom/atoms";
+import { useState } from "react";
 
 const SearchBar = () => {
-  const [search, setSerch] = useRecoilState(searching);
+  const [value, setValue] = useState("");
+  const setSerch = useSetRecoilState(searching);
   const inputHandle = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSerch(event.target.value);
+    setValue(event.target.value);
+  };
+  const submitHandler = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setSerch(value);
   };
 
   return (
-    <div className="mb-4 flex w-[90%] justify-center sm:w-[40rem]">
+    <form
+      className="mb-4 flex w-[90%] justify-center sm:w-[40rem]"
+      onSubmit={submitHandler}
+    >
       <input
-        value={search}
+        value={value}
         type="text"
         onChange={inputHandle}
         placeholder="어떤 노래를 찾고계신가요?"
@@ -18,14 +27,14 @@ const SearchBar = () => {
       />
       <button
         className="w-[2rem] rounded-r-md bg-white p-2"
-        onClick={() => setSerch("")}
+        onClick={() => setValue("")}
       >
         X
       </button>
       <button className="ml-3 w-[20%] rounded-md bg-blue-200 text-blue-700 hover:bg-blue-100 hover:ring-2 sm:w-[5rem]">
         검색
       </button>
-    </div>
+    </form>
   );
 };
 
