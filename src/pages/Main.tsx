@@ -7,7 +7,7 @@ import MusicBar from "../components/musicInfo/MusicBar";
 const Main = () => {
   return (
     <Layout>
-      <Title text="EL Music" />
+      <Title text="Music Chart" />
       <SearchBar />
       <MusicBar />
       <MusicList />

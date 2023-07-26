@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from "../pages/Main";
 import NotFound from "../pages/NotFound";
 import MusicInfo from "../pages/MusicInfo";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const Router = () => {
   return (
