@@ -7,7 +7,7 @@ import MusicBar from "../components/musicInfo/MusicBar";
 const Main = () => {
   return (
     <Layout>
-      <Title text="Music Chart" />
+      <Title text="apple MUSIC" />
       <SearchBar />
       <MusicBar />
       <MusicList />
